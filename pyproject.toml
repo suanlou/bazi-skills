@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "miaosuan-bazi-engine"
+version = "0.1.0"
+description = "Deterministic BaZi calculation skill and engine for AI agents."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Miaosuan" }]
+keywords = ["bazi", "八字", "命理", "lunar", "ai-agent", "skill", "mcp"]
+dependencies = [
+  "lunar-python==1.2.24"
+]
+
+[project.optional-dependencies]
+mcp = [
+  "mcp>=1.2.0,<2.0"
+]
+
+[project.urls]
+Homepage = "https://miaosuan.xyz/?utm_source=github&utm_medium=repo&utm_campaign=bazi_skill"
+Repository = "https://github.com/miaosuan/miaosuan-bazi-skill"
+
+[project.scripts]
+miaosuan-bazi = "miaosuan_bazi_engine.__main__:main"
+miaosuan-bazi-mcp = "miaosuan_bazi_engine.mcp_server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+miaosuan_bazi_engine = ["data/*.json"]
