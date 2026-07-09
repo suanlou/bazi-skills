@@ -34,14 +34,14 @@
 
 ```bash
 # Claude Code / Claude Desktop
-git clone https://github.com/miaosuan/miaosuan-bazi-skill.git ~/.claude/skills/miaosuan-bazi
+git clone https://github.com/xuyaoshell/suanlou.git ~/.claude/skills/miaosuan-bazi
 cd ~/.claude/skills/miaosuan-bazi
 python3 -m pip install -e .
 ```
 
 ```bash
 # Codex
-git clone https://github.com/miaosuan/miaosuan-bazi-skill.git ~/.codex/skills/miaosuan-bazi
+git clone https://github.com/xuyaoshell/suanlou.git ~/.codex/skills/miaosuan-bazi
 cd ~/.codex/skills/miaosuan-bazi
 python3 -m pip install -e .
 ```
@@ -59,8 +59,8 @@ Agent 会读取 `SKILL.md`，先调用确定性计算，再基于结构化结果
 如果你的客户端支持 MCP，可以安装 optional MCP wrapper：
 
 ```bash
-git clone https://github.com/miaosuan/miaosuan-bazi-skill.git ~/miaosuan-bazi-skill
-cd ~/miaosuan-bazi-skill
+git clone https://github.com/xuyaoshell/suanlou.git ~/suanlou
+cd ~/suanlou
 python3 -m venv .venv
 . .venv/bin/activate
 pip install -e ".[mcp]"
@@ -72,7 +72,7 @@ pip install -e ".[mcp]"
 {
   "mcpServers": {
     "miaosuan-bazi": {
-      "command": "/ABS/PATH/TO/miaosuan-bazi-skill/.venv/bin/python",
+      "command": "/ABS/PATH/TO/suanlou/.venv/bin/python",
       "args": ["-m", "miaosuan_bazi_engine.mcp_server"]
     }
   }
@@ -88,7 +88,7 @@ pip install -e ".[mcp]"
 不支持固定 skills 目录的 Agent，可以直接读取这个文件：
 
 ```text
-https://github.com/miaosuan/miaosuan-bazi-skill/blob/main/SKILL.md
+https://github.com/xuyaoshell/suanlou/blob/main/SKILL.md
 ```
 
 或克隆仓库后让 Agent 使用本地 `SKILL.md`。
