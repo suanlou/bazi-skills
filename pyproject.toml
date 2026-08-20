@@ -22,7 +22,7 @@ mcp = [
 
 [project.urls]
 Homepage = "https://miaosuan.xyz/?utm_source=github&utm_medium=repo&utm_campaign=bazi_skill"
-Repository = "https://github.com/xuyaoshell/suanlou"
+Repository = "https://github.com/suanlou/bazi-skills"
 
 [project.scripts]
 miaosuan-bazi = "miaosuan_bazi_engine.__main__:main"
